@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Product } from 'src/app/models/product.model';
+import { Product } from '../../models/product.model';
 
 @Component({
   selector: 'app-products',
@@ -7,6 +7,7 @@ import { Product } from 'src/app/models/product.model';
   styleUrls: ['./products.component.scss']
 })
 export class ProductsComponent {
+
   products: Product[] = [
     {
       id: '1',
@@ -17,7 +18,7 @@ export class ProductsComponent {
     {
       id: '2',
       name: 'Producto 2',
-      image: 'https://www.junglescout.com/wp-content/uploads/2021/01/product-photo-water-bottle-hero.png',
+      image: 'https://hips.hearstapps.com/hmg-prod/images/best-skincare-products-1656081764.jpg',
       price: 12.20
     },
     {
