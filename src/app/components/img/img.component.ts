@@ -6,8 +6,9 @@ import {  Component,  EventEmitter,  Input,  Output,  OnChanges,  OnInit, AfterV
   styleUrls: ['./img.component.scss'],
 })
 export class ImgComponent implements OnInit, OnChanges, AfterViewInit, OnDestroy{
-
+  
   img: string = '';
+
   @Input('img')
   set changeImg(newImg: string) {
     this.img = newImg;
