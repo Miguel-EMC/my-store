@@ -1,5 +1,5 @@
 
-<p>
+<!-- <p>
   La cantidad de productos agregados {{myShoppingCart.length}}
 </p>
 <p>
@@ -7,11 +7,29 @@
 </p>
 <p>
   Today: {{today | timeAgo}}
-</p>
+</p> -->
+<button (click)="createNewProduct()">Create</button>
+<button (click)="onShowDetail('1222551')">Detalle not found</button>
 <div class="products-grid">
   <app-product
     [product]="product"
     *ngFor="let product of products"
     (addedProduct)="onAddToShoppingCart($event)"
+    (showProduct)="onShowDetail($event)"
   ></app-product>
+  <button (click)="loadMore()">Load  More</button>
+</div>
+
+<div class="product-detail" [class.active]="showProductDetail">
+  {{statusDetail}}
+  
+  <div *ngIf="productChosen">
+    <button>Close</button>
+    <h1>{{productChosen.title}}</h1>
+
+    <p>{{productChosen.description}}</p>
+    <button (click)="updateProduct()">editar</button>
+    <button (click)="deleteProduct()">delete</button>
+
+  </div>
 </div>
